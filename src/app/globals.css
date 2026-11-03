@@ -214,3 +214,19 @@ tbody tr:hover { background: rgba(244,243,255,.65); }
   .batch-card { padding:17px; }
   .batch-card-bottom { align-items:flex-start; flex-direction:column; }
 }
+
+
+/* Fees pending screen */
+.fee-insight{display:grid;grid-template-columns:minmax(220px,1fr) minmax(180px,1.2fr);gap:12px 28px;align-items:center;margin:0 0 18px;padding:20px 22px}
+.fee-insight-label{color:#8b8fa7;font-size:9px;font-weight:800;letter-spacing:1px}
+.fee-insight h3{margin:7px 0 4px;color:#292d45;font:800 20px Manrope,sans-serif;letter-spacing:-.5px}
+.fee-insight p{margin:0;color:#9297ad;font-size:10px;line-height:1.5}
+.fee-overview-track{height:11px;overflow:hidden;border-radius:20px;background:#f0eef8}
+.fee-overview-track i{display:block;height:100%;border-radius:20px;background:linear-gradient(90deg,#7567e8,#9b90f4)}
+.fee-overview-legend{grid-column:2;display:flex;flex-wrap:wrap;gap:14px;color:#858aa3;font-size:9px}
+.fee-overview-legend span{display:inline-flex;align-items:center;gap:5px}
+.fee-overview-legend b{color:#444962;margin-left:2px}
+.fee-dot-paid,.fee-dot-pending{width:7px;height:7px;border-radius:50%;background:#36a982}
+.fee-dot-pending{background:#d99a4b}
+.fee-filter-label{display:inline-flex;align-items:center;gap:6px;padding:8px 10px;border-radius:10px;background:rgba(246,245,255,.8);color:#7569c9;font-size:9px;font-weight:700}
+@media(max-width:760px){.fee-insight{grid-template-columns:1fr;gap:13px;padding:16px}.fee-overview-legend{grid-column:1}}
