@@ -174,3 +174,16 @@ tbody tr:hover { background: rgba(244,243,255,.65); }
   .nav-copy b { font-size: 13px; }
   .nav-copy small { font-size: 10px; }
 }
+
+
+/* Student management screen */
+.student-management .panel-head { align-items: center; }
+.student-filter { display:flex; align-items:center; gap:8px; border:1px solid rgba(143,149,184,.2); background:rgba(255,255,255,.75); border-radius:11px; padding:8px 10px; color:#858aa3; }
+.student-filter select { border:0; outline:0; background:transparent; color:#555970; font:600 10px 'DM Sans',sans-serif; }
+.student-phone { display:inline-flex; align-items:center; gap:6px; color:#299b74; text-decoration:none; font-size:10px; font-weight:700; }
+.student-phone:hover { text-decoration:underline; }
+@media(max-width:760px) {
+  .student-management .panel-head { align-items:flex-start; flex-direction:column; }
+  .student-filter { width:100%; }
+  .student-filter select { flex:1; }
+}
