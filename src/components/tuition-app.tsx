@@ -10,8 +10,9 @@ import {
   CheckCircle2, AlertCircle, Send, Sparkles, ChevronRight, Phone, Home, LockKeyhole,
 } from "lucide-react";
 
+import { Avatar, Status, type Student } from "@/components/shared/student-ui";
+
 type Tab = "Overview" | "Students" | "Batches" | "Fees Pending" | "Attendance" | "Weekly Tests" | "Homework" | "Payment & Receipts" | "Enquiries / Referrals" | "Parent Login" | "Parent Dashboard" | "Parent Portal";
-type Student = { id: number; name: string; initials: string; className: string; batch: string; phone: string; fee: number; due: string; daysLate: number; status: "Paid" | "Pending" | "Late"; attendance: "Present" | "Absent"; color: string };
 
 const initialStudents: Student[] = [
   { id: 1, name: "Aarav Sharma", initials: "AS", className: "Class 10", batch: "Morning A", phone: "9876543210", fee: 1800, due: "05 Nov", daysLate: 0, status: "Paid", attendance: "Present", color: "blue" },
@@ -39,15 +40,6 @@ const navItems: { label: Tab; icon: typeof LayoutDashboard; hint: string; title:
 
 const money = (n: number) => "₹" + n.toLocaleString("en-IN");
 const waLink = (phone: string, message: string) => "https://wa.me/91" + phone.replace(/\D/g, "") + "?text=" + encodeURIComponent(message);
-
-function Avatar({ student, small = false }: { student: Student; small?: boolean }) {
-  return <span className={`avatar avatar-${student.color} ${small ? "avatar-small" : ""}`}>{student.initials}</span>;
-}
-
-function Status({ value }: { value: string }) {
-  const cls = value.toLowerCase() === "paid" || value.toLowerCase() === "present" ? "success" : value.toLowerCase() === "late" || value.toLowerCase() === "absent" ? "danger" : "warning";
-  return <span className={`status status-${cls}`}><i />{value}</span>;
-}
 
 const routeByTab: Record<Tab, string> = {
   "Overview": "/dashboard",
