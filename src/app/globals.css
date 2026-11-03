@@ -128,3 +128,49 @@ tbody tr:hover { background: rgba(244,243,255,.65); }
   .page-content { padding-top: 25px; }
   .stat-card, .panel { border-radius: 16px; }
 }
+
+
+/* Clearer owner-first navigation and dashboard */
+.nav-link {
+  min-height: 54px;
+  align-items: center;
+  gap: 12px;
+  padding: 9px 12px;
+}
+.nav-copy {
+  display: flex;
+  flex: 1;
+  min-width: 0;
+  flex-direction: column;
+  gap: 3px;
+}
+.nav-copy b {
+  color: inherit;
+  font-size: 12px;
+  font-weight: 700;
+  line-height: 1.2;
+}
+.nav-copy small {
+  color: #9297ad;
+  font-size: 9px;
+  font-weight: 500;
+  line-height: 1.25;
+  white-space: normal;
+}
+.nav-active .nav-copy small { color: #7770b5; }
+.nav-caption {
+  margin: 24px 12px 10px;
+  font-size: 9px;
+  font-weight: 800;
+  letter-spacing: 1px;
+}
+.page-title h1 { font-size: clamp(25px, 3vw, 34px); }
+.page-title p { max-width: 620px; line-height: 1.65; }
+.stat-card > small { font-size: 10px; line-height: 1.5; }
+.stat-top { font-size: 11px; font-weight: 650; }
+.panel-head p { font-size: 11px; line-height: 1.45; }
+@media (max-width: 760px) {
+  .nav-link { min-height: 56px; }
+  .nav-copy b { font-size: 13px; }
+  .nav-copy small { font-size: 10px; }
+}
