@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import "./globals.css";
+import TuitionApp from "@/components/tuition-app";
 
 export const metadata: Metadata = {
   title: "TUITIONAPP — Coaching Management",
@@ -9,7 +10,7 @@ export const metadata: Metadata = {
 export default function RootLayout({ children }: Readonly<{ children: React.ReactNode }>) {
   return (
     <html lang="en">
-      <body>{children}</body>
+      <body><TuitionApp />{children}</body>
     </html>
   );
 }
