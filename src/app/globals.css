@@ -187,3 +187,30 @@ tbody tr:hover { background: rgba(244,243,255,.65); }
   .student-filter { width:100%; }
   .student-filter select { flex:1; }
 }
+
+
+/* Batch management screen */
+.batch-grid { display:grid; grid-template-columns:repeat(2,minmax(0,1fr)); gap:16px; margin:0 0 20px; }
+.batch-card { padding:20px; min-width:0; }
+.batch-card-top { display:flex; align-items:center; justify-content:space-between; }
+.batch-symbol { width:42px; height:42px; display:grid; place-items:center; border-radius:13px; }
+.batch-symbol-0 { color:#7062d8; background:rgba(112,98,216,.12); }
+.batch-symbol-1 { color:#269b79; background:rgba(38,155,121,.12); }
+.batch-symbol-2 { color:#d58a35; background:rgba(213,138,53,.13); }
+.batch-symbol-3 { color:#5388d9; background:rgba(83,136,217,.13); }
+.batch-card h3 { margin:17px 0 4px; color:#292d45; font-size:17px; letter-spacing:-.35px; }
+.batch-card > p { margin:0; color:#9297ad; font-size:11px; }
+.batch-meta { display:flex; flex-wrap:wrap; gap:14px; margin:18px 0; color:#777d96; font-size:10px; }
+.batch-meta span { display:inline-flex; align-items:center; gap:6px; }
+.batch-progress { padding:13px 0; border-top:1px solid rgba(142,148,180,.13); border-bottom:1px solid rgba(142,148,180,.13); }
+.batch-progress > div:first-child { display:flex; justify-content:space-between; margin-bottom:9px; color:#858aa3; font-size:10px; }
+.batch-progress b { color:#555a74; }
+.batch-progress .progress-line { height:6px; }
+.batch-card-bottom { display:flex; align-items:center; justify-content:space-between; gap:10px; padding-top:14px; color:#858aa3; font-size:10px; }
+.batch-card-bottom > span b { color:#555a74; }
+.batch-dot { padding:0 4px; color:#c1c4d2; }
+@media(max-width:760px) {
+  .batch-grid { grid-template-columns:1fr; }
+  .batch-card { padding:17px; }
+  .batch-card-bottom { align-items:flex-start; flex-direction:column; }
+}
