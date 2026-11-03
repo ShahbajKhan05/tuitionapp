@@ -230,3 +230,35 @@ tbody tr:hover { background: rgba(244,243,255,.65); }
 .fee-dot-pending{background:#d99a4b}
 .fee-filter-label{display:inline-flex;align-items:center;gap:6px;padding:8px 10px;border-radius:10px;background:rgba(246,245,255,.8);color:#7569c9;font-size:9px;font-weight:700}
 @media(max-width:760px){.fee-insight{grid-template-columns:1fr;gap:13px;padding:16px}.fee-overview-legend{grid-column:1}}
+
+
+/* Attendance screen */
+.attendance-toolbar-new{gap:11px;align-items:center}
+.batch-select-control{display:flex;align-items:center;gap:8px;padding:9px 11px;border:1px solid rgba(143,149,184,.2);border-radius:12px;background:rgba(255,255,255,.72);color:#858aa3}
+.batch-select-control select{border:0;outline:0;background:transparent;color:#555970;font:600 10px 'DM Sans',sans-serif;min-width:100px}
+.attendance-stats{display:grid;grid-template-columns:minmax(220px,.85fr) minmax(280px,1.4fr);gap:15px;margin:0 0 17px}
+.attendance-rate-card,.attendance-quick-card{display:flex;align-items:center;justify-content:space-between;gap:16px;padding:19px 21px;min-width:0}
+.attendance-kicker{display:block;color:#9297ad;font-size:9px;font-weight:800;letter-spacing:1px}
+.attendance-rate-card strong{display:block;margin:5px 0 2px;color:#292d45;font:800 27px Manrope,sans-serif;letter-spacing:-1px}
+.attendance-rate-card small,.attendance-quick-card small{display:block;color:#9297ad;font-size:10px;line-height:1.5}
+.attendance-ring{width:76px;height:76px;flex:0 0 76px;display:grid;place-items:center;border-radius:50%}
+.attendance-ring>div{width:59px;height:59px;display:grid;place-items:center;border-radius:50%;background:#fff;color:#4d9d7d;font:800 14px Manrope}
+.attendance-quick-card strong{display:block;margin:6px 0 3px;color:#34384f;font:750 13px Manrope}
+.attendance-bulk-actions{display:flex;flex-direction:column;gap:7px;flex-shrink:0}
+.attendance-bulk-actions button{display:flex;align-items:center;justify-content:center;gap:6px;padding:8px 10px;border:1px solid rgba(143,149,184,.2);border-radius:9px;background:rgba(255,255,255,.8);color:#5c6681;font-size:9px;font-weight:750;white-space:nowrap}
+.attendance-bulk-actions button:first-child{color:#21966d;background:#f2fbf6;border-color:#d8f0e3}
+.attendance-bulk-actions button:last-child{color:#d15f6a;background:#fff5f5;border-color:#f4dfe1}
+.attendance-table-panel .panel-head{align-items:center}
+.attendance-no-alert{color:#a0a3b2;font-size:9px}
+@media(max-width:760px){
+ .attendance-stats{grid-template-columns:1fr}
+ .attendance-rate-card,.attendance-quick-card{padding:16px}
+ .attendance-toolbar-new{align-items:stretch}
+ .attendance-toolbar-new .date-control,.attendance-toolbar-new .batch-select-control{flex:1;min-width:0}
+ .attendance-toolbar-new .date-control input{width:100%;min-width:0}
+ .attendance-summary{margin:3px 0 0}
+ .attendance-quick-card{align-items:flex-start}
+ .attendance-bulk-actions{flex-direction:row;flex-wrap:wrap}
+ .attendance-bulk-actions button{padding:8px}
+ .attendance-table-panel .panel-head{align-items:flex-start}
+}
